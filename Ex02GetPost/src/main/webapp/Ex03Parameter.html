@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action ="Ex03">
+		<h4>직업</h4>
+		<select name ="job"><!--  선택지 중 하나만 선택가능 name 은 select 태그에 지정 -->
+			<option value ="student">학생</option>
+			<option value ="teacher">선생님</option>
+			<option value ="developer">개발자</option>
+			
+		</select>
+		
+		<h4>성별</h4>
+		<!-- name을 넣어줘서 둘중 하나만 선택 가능하게 설정 해줘야 함 -->
+		<input type ="radio" name ="Gender" value ="man">남자
+		<!-- value ="man" -> value 값 지정해주면 서블릿에서 받아올때 man값을 받아옴 -->
+		<input type ="radio" name ="Gender" value ="woman">여자
+		<!-- radio, checkbox-> 출력값은 on -> value를 지정해줘야 원하는 값으로 받아옴  -->
+		<h4>취미</h4>
+		<input type ="checkbox" name = "hobby" value ="soccer">축구
+		<input type ="checkbox" name = "hobby" value ="baseball" >야구
+		<input type ="checkbox" name = "hobby" value ="basketball" >농구
+		<br>
+		
+		<input type ="submit" >
+		
+	</form>
+
+
+</body>
+</html>
