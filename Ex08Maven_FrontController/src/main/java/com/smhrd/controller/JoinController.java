@@ -32,6 +32,7 @@ public class JoinController implements Command {
 					int cnt = dao.join(member);//회원가입 기능
 					
 					if(cnt > 0) { //회원가입 성공
+						// 실제로 이동시켜주는거는 frontcontroller에서 하기위함 
 						System.out.println("회원가입 성공");
 						url ="index.jsp";
 					}else { //회원가입 실패

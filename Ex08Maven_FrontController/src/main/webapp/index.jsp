@@ -15,7 +15,7 @@
 	<a href ="join.html"><button>회원가입 </button></a>
 	<a href ="login.html"><button>로그인 </button></a>
 	<%}else{%>
-	<%=member.getNick() %>님 환영합니다 
+	<%=member.getNick() %> 님 환영합니다 
 	<%} %>
 </body>
 </html>
