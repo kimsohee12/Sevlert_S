@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.WebMember"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,11 +12,16 @@
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
+<%
+	WebMember loginMember = (WebMember)session.getAttribute("loginMember");
+%>
 
 <style>
 </style>
 <%
-	String email = (String)request.getAttribute("joinEamil");
+	String email = (String)request.getParameter("email");
+// 로그인  x -> loginMember : null
+// 로그인 o -> loginMember : 값을 가지고있음
 %>
 <body style="text-align: center;">
 

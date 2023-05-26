@@ -11,9 +11,24 @@
 	</insert>
 
 	<select id="login" parameterType ="com.smhrd.model.WebMember" resultType ="com.smhrd.model.WebMember">
-		select email  from webmember where email =#{email} and pw = #{pw}
+		select email, pw, tel, address  from webmember where email =#{email} and pw = #{pw}
 	</select>
 
+
+	<update id="update" parameterType="com.smhrd.model.WebMember">
+		update webmember set pw=#{pw},tel=#{tel},address =#{address} where email = #{email}
+		
+	</update>
+	<!-- 2개 이상앵을 가져올 경우 => 기본값 =>list -->
+	<select id="select" resultType ="com.smhrd.model.WebMember">
+		select * from webmember
+	</select>
+	<!--  값이 하나이고 자바에서 기본으로 제공하는 형대 (기본타입, String )->타입 생략가능 -->
+	<delete id ="delete">
+		delete from webmember where email =#{email}
+	</delete>
+	
+	
 </mapper>
 
 

@@ -24,6 +24,10 @@ public class FrontController extends HttpServlet {
 		list =new HashMap<>();
 		list.put("/join.do",new JoinController());
 		list.put("/login.do", new LoginController());
+		list.put("/logout.do", new LogoutController());
+		list.put("/update.do", new UpdateController());
+		list.put("/delete.do", new DeleteController());
+		
 	}
 
 	
@@ -42,9 +46,9 @@ public class FrontController extends HttpServlet {
 		         rd.forward(request,response);
 		      }else {
 		         //redirecting
-		         response.sendRedirect(des);
+		    	  response.sendRedirect(des);
+		       
 		      }
-		response.sendRedirect(des);
 		
 	}
 	

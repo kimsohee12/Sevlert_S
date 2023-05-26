@@ -30,7 +30,8 @@ public class JoinController implements Command {
 			if(cnt > 0) { //회원가입 성공
 				// 실제로 이동시켜주는거는 frontcontroller에서 하기위함 
 				//request 영역에 회원가입 시 입력한 이메일 추가 저장
-				request.setAttribute("joinEmail", email);
+				
+//				request.setAttribute("joinEmail", email);
 				System.out.println("회원가입 성공");
 				url ="joinSuccess.jsp";
 			}else { //회원가입 실패
